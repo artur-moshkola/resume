@@ -1,0 +1,156 @@
+\documentclass[letterpaper,11pt]{article}
+\pagestyle{empty}
+\usepackage{geometry}
+\geometry{letterpaper, margin=0.5in}
+
+\title{Artur Moshkola Resume}
+\author{Artur Moshkola}
+\date{\today}
+
+\usepackage{fontawesome5}
+
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+
+\usepackage{indentfirst}
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*,noitemsep}
+
+\usepackage{titlesec}
+
+\renewcommand{\ttdefault}{pcr}
+
+\titleformat{\section}
+  {\large\ttfamily\bfseries\raggedright}
+  {}{0em}
+  {}
+  [\titlerule]
+
+\titlespacing*{\section}{0pt}{1\baselineskip}{1\baselineskip}
+
+\titleformat{\subsection}
+  {\large\ttfamily\raggedright}
+  {}{0em}
+  {}
+
+\titlespacing*{\subsection}{0pt}{1\baselineskip}{0.5\baselineskip}
+
+\newcommand{\datedsection}[2]{
+  \section[#1]{#1 \hfill #2}
+}
+
+\newcommand{\datedsubsection}[2]{
+  \subsection[#1]{\textbf {#1} \hfill #2}
+}
+
+\newcommand{\name}[1]{
+  \LARGE
+  \fontfamily{phv}\selectfont
+  \begin{center} \textbf{#1} \end{center}\par
+  \normalsize\normalfont
+}
+
+\newcommand{\job}[4]{
+  \subsection{\textbf{#1} #2 \hfill #3 - #4}
+}
+
+\newcommand\contact[4]{
+    \faCity \space #1 \hfill \faPhone \space \href{tel:#2}{#2} \hfill \faAt \space \href{mailto:#3}{#3} \hfill \faLinkedin \space \href{https://www.linkedin.com/in/#4/}{#4}
+}
+
+\newcommand\skillgroup[1]{
+    \large\ttfamily\bfseries\raggedright\underline{#1:}\normalsize\normalfont
+}
+
+\usepackage{multicol}
+
+\begin{document}
+
+\name{Artur Moshkola}
+\contact{Montreal, QC}{(438) 378-0927}{artur.moshkola@gmail.com}{artur-moshkola}
+
+\section{Summary}
+\begin{itemize}
+    \item 20 years of experience in software development, 12 of which in .NET Framework and SQL Server
+    \item Some of the projects required me to take on some Tech Lead and Software Architect responsibilities
+    \item Understanding of low-level processes, multithreading, parallel and asynchronous computing
+    \item Fast learning, easy adapting to new tools and changing requirements and priorities
+\end{itemize}
+
+\begin{multicols}{4}
+
+\begin{minipage}{\linewidth}
+\skillgroup{Languages}
+\begin{itemize}
+    \item C\#
+    \item SQL
+    \item JavaScript
+    \item TypeScript
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}{\linewidth}
+\skillgroup{Frameworks}
+\begin{itemize}
+    \item .NET Core (MVC, EF)
+    \item React
+    \item AngularJS
+    \item TypeScript
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}{\linewidth}
+\skillgroup{Data}
+\begin{itemize}
+    \item SQL
+    \item DACPAC
+    \item Azure Data Factory
+    \item Azure Storage
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}{\linewidth}
+\skillgroup{CI/CD}
+\begin{itemize}
+    \item TeamCity
+    \item Azure DevOps
+    \item Octopus Deploy
+\end{itemize}
+\end{minipage}
+
+\end{multicols}
+
+\section{Experience}
+\job{Mass General Brigham}{Boston, USA (via Proxet Group)}{May 2021}{Present}
+
+Working on development of a research management system containing many modules covering different domain areas.
+
+Among other things I have designed and implemented reusable software components which allow us to increase systems’ consistency by using the same components in different modules.
+
+Made possible a complex data migration from an external system by defining a scope of data to be migrated, finding problems to be addressed and implementing a solution using SQL and DACPAC.
+
+Effectively switched between domain areas and software modules, answering changes in business priorities and teams’ capacities.
+
+Suggested improvements to the architecture and CI/CD processes led to minimizing risks of human errors to cause production incidents.
+
+I took part in implementation of some CI/CD processes in Azure DevOps when solution was migrated from on premises services to the cloud.
+
+Supported and reviewed other team members.
+
+\job{Insurance Company ASKA}{Ukraine}{December 2014}{May 2021}
+
+I was hired as a first .NET developer to start a new project which was intended to automate work of a nationwide agent’s network, taking them from the mess of local excel files to the centralized front insurance system combining BPM and CRM functionality.
+
+While successfully solving that problem I grew with the project to the roles of a software architect and a technical lead of a team of 5 developers and QA engineers.
+
+\job{Prior experience}{Ukraine}{2004}{2014}
+
+Developed PHP / MySQL framework by which I brought well-used approaches from .NET world into PHP to make possible combining convenient and robust development patterns with accessible and widely used then PHP hosting. That was long before Azure and AWS became common :) It was running about 30 websites.
+
+Unrelated to software development, I worked as a network engineer and a system administrator, biggest project was a 900 ports network in a 6-floor office building.
+
+\section{Education}
+
+MS, Computer Science, Donetsk National Technical University, Ukraine, 2009
+
+\end{document}
