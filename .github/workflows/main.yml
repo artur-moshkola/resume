@@ -1,0 +1,16 @@
+name: BuildPdf
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Action for LaTeX
+        # You may pin to the exact commit or the version.
+        # uses: xu-cheng/latex-action@25080975331dc4fc8e6f1af55788e00f84f51fff
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: resume.tex
+                
