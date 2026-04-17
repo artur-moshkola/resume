@@ -1,4 +1,4 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 \pagestyle{empty}
 \usepackage{geometry}
 \geometry{letterpaper, margin=0.5in}
@@ -26,14 +26,14 @@
   {}
   [\titlerule]
 
-\titlespacing*{\section}{0pt}{1\baselineskip}{1\baselineskip}
+\titlespacing*{\section}{0pt}{0.8\baselineskip}{0.8\baselineskip}
 
 \titleformat{\subsection}
   {\large\ttfamily\raggedright}
   {}{0em}
   {}
 
-\titlespacing*{\subsection}{0pt}{1\baselineskip}{0.5\baselineskip}
+\titlespacing*{\subsection}{0pt}{0.8\baselineskip}{0.5\baselineskip}
 
 \newcommand{\datedsection}[2]{
   \section[#1]{#1 \hfill #2}
@@ -50,8 +50,18 @@
   \normalsize\normalfont
 }
 
-\newcommand{\job}[4]{
+\newcommand{\position}[1]{
+  \Large
+  \fontfamily{phv}\selectfont
+  \begin{center} \textbf{#1} \end{center}\par
+  \normalsize\normalfont
+}
+
+\newcommand{\proj}[4]{
   \subsection{\textbf{#1} #2 \hfill #3 - #4}
+}
+\newcommand{\job}[5]{
+  \subsection{\textbf{#1} @ \textbf{#2} \\ #3 \hfill #4 - #5}
 }
 
 \newcommand\contact[4]{
@@ -67,6 +77,7 @@
 \begin{document}
 
 \name{Artur Moshkola}
+\position{Senior Full-Stack .NET Engineer}
 \contact{Montreal, QC}{(438) 378-0927}{artur.moshkola@gmail.com}{artur-moshkola}
 
 \section{Summary}
@@ -121,7 +132,7 @@
 \end{multicols}
 
 \section{Experience}
-\job{Mass General Brigham}{Boston, USA (via Proxet Group)}{May 2021}{Present}
+\job{Senior .NET Engineer}{Mass General Brigham}{Boston, USA (via Proxet Group)}{May 2021}{Present}
 
 Working on development of a research management system containing many modules covering different domain areas.
 
@@ -137,13 +148,13 @@ I took part in implementation of some CI/CD processes in Azure DevOps when solut
 
 Supported and reviewed other team members.
 
-\job{Insurance Company ASKA}{Ukraine}{December 2014}{May 2021}
+\job{Lead Full-Stack Engineer}{Insurance Company ASKA}{Ukraine}{December 2014}{May 2021}
 
 I was hired as a first .NET developer to start a new project which was intended to automate work of a nationwide agent’s network, taking them from the mess of local excel files to the centralized front insurance system combining BPM and CRM functionality.
 
 While successfully solving that problem I grew with the project to the roles of a software architect and a technical lead of a team of 5 developers and QA engineers.
 
-\job{Prior experience}{Ukraine}{2004}{2014}
+\proj{Prior experience}{Ukraine}{2004}{2014}
 
 Developed PHP / MySQL framework by which I brought well-used approaches from .NET world into PHP to make possible combining convenient and robust development patterns with accessible and widely used then PHP hosting. That was long before Azure and AWS became common :) It was running about 30 websites.
 
@@ -152,5 +163,12 @@ Unrelated to software development, I worked as a network engineer and a system a
 \section{Education}
 
 MS, Computer Science, Donetsk National Technical University, Ukraine, 2009
+
+\section{Languages}
+\begin{itemize}
+    \item English - full working proficiency
+    \item French - limited working proficiency
+\end{itemize}
+
 
 \end{document}
